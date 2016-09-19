@@ -22,7 +22,7 @@ class DataStore(object):
         :return:
         """
         b = time.time()
-        conn = MySQLdb.connect(host='127.0.0.1', port=3306, user='root', passwd='fdy8335878', db='ehr-temporary', charset='utf8')
+        conn = MySQLdb.connect(host='127.0.0.1', port=3306, user='root', passwd='12345678', db='ehr-temporary', charset='utf8')
         self.df.to_sql('dat', conn,  if_exists='replace', flavor='mysql', index=False)
         ef = pd.read_sql('select * from dat', conn)
         print time.time() - b
